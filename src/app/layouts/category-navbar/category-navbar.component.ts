@@ -7,10 +7,13 @@ import { CategoriesService } from 'src/app/services/categories.service';
   styleUrls: ['./category-navbar.component.css']
 })
 export class CategoryNavbarComponent implements OnInit {
-  public navbarCollapsed = true;
+  
   categoryArrays:any[] = [];
+  isCollapsed = false;
   constructor(private categoryService:CategoriesService) { }
-
+  toggleNavbar() {
+    this.isCollapsed = !this.isCollapsed;
+  }  
   ngOnInit(): void{
     this.categoryService.loadDatas().subscribe(val=> {
       //console.log(val);

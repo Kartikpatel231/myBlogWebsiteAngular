@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CategoryNavbarComponent } from './layouts/category-navbar/category-navbar.component';
 import { PostCardComponent } from './layouts/post-card/post-card.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'terms-conditions',component:TermsAndConditionsComponent},
   {path:'contact',component:ContactUsComponent},
   {path:'about',component:AboutUsComponent},
-  {path:'posts/:id',component:PostCardComponent}
+  {path:'posts/:id',component:PostCardComponent},
+  {path:'category',component:CategoryNavbarComponent}
 ];
 
 @NgModule({
