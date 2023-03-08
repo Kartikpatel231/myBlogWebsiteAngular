@@ -18,8 +18,12 @@ import { PostCardComponent } from './layouts/post-card/post-card.component';
 import { AngularFireModule } from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatCardModule} from '@angular/material/card'; 
+import {MatIconModule} from '@angular/material/icon'; 
 import { environment } from 'src/environments/environment.prod';
+import { DarkModeComponent } from './dark-mode/dark-mode.component';
 
 @NgModule({
   declarations: [
@@ -36,14 +40,19 @@ import { environment } from 'src/environments/environment.prod';
     CommentFormComponent,
     CommentListComponent,
     AboutUsComponent,
-    PostCardComponent
+    PostCardComponent,
+    DarkModeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule
 
   ],
   providers: [],

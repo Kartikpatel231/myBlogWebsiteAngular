@@ -7,15 +7,25 @@ import { CategoriesService } from 'src/app/services/categories.service';
   styleUrls: ['./category-navbar.component.css']
 })
 export class CategoryNavbarComponent implements OnInit {
-  public navbarCollapsed = true;
+  
   categoryArrays:any[] = [];
+  isCollapsed = false;
   constructor(private categoryService:CategoriesService) { }
-
+  toggleNavbar() {
+    this.isCollapsed = !this.isCollapsed;
+  }  
   ngOnInit(): void{
     this.categoryService.loadDatas().subscribe(val=> {
       //console.log(val);
       this.categoryArrays=val;
     });
+  }
+  isDarkMode = false;
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    const body = document.querySelector('body');
+    body.classList.toggle('dark-mode', this.isDarkMode);
   }
 
 }

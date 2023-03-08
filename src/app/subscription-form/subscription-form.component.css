@@ -4,10 +4,10 @@
     margin: auto;
 }
 input[type=text],input[type=email]{
-width: 100%;
+width: 30%;
 }
 .sub-text{
-    width: 500px;
+    width: 900px;
 }
 .login-form {
     max-width: 400px;
