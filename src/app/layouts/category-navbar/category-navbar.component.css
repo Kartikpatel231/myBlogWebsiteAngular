@@ -14,3 +14,24 @@ li{
 p {
   font-family: Lato;
 }
+
+.custom-control-label::before {
+    background-color: #ffffff;
+  }
+  
+  .custom-control-label::after {
+    background-color: #343a40;
+  }
+  
+  .custom-control-input:checked~.custom-control-label::before {
+    background-color: #343a40;
+  }
+  
+  .custom-control-input:checked~.custom-control-label::after {
+    background-color: #ffffff;
+  }
+  dark-mode {
+    background-color: rgb(9, 17, 9);
+    color: rgb(31, 17, 17);
+  }
+  

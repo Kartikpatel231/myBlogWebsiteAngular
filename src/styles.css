@@ -15,6 +15,15 @@ body{
     color:var(--body-text-color)
 }
 
+/* Light mode styles */
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  
 .site-logo{
     padding: 5px 20px;
     border-radius: 20px;

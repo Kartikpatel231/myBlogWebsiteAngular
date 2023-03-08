@@ -1,9 +1,16 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark  mb-1 fixed-top">
-          <a class="navbar-brand" href="/">Navbar</a>
+          <a class="navbar-brand" href="/"></a>
+            <div class="custom-control custom-switch  col-md-1">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1" (click)="toggleDarkMode()">
+              <label class="custom-control-label" for="customSwitch1">dark mode</label>
+            </div>
+          
+          
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
             <span class="navbar-toggler-icon"></span>
           </button>
-        
+         
+          
           <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{ 'show': isCollapsed }">
             <ul class="navbar-nav mr-auto"  *ngFor='let cat of categoryArrays'>
              
@@ -14,3 +21,5 @@
             </ul>
           </div>
         </nav>
+       
+      

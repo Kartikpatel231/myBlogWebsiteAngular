@@ -20,5 +20,12 @@ export class CategoryNavbarComponent implements OnInit {
       this.categoryArrays=val;
     });
   }
+  isDarkMode = false;
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    const body = document.querySelector('body');
+    body.classList.toggle('dark-mode', this.isDarkMode);
+  }
 
 }

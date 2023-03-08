@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DarkModeComponent } from './dark-mode/dark-mode.component';
 import { CategoryNavbarComponent } from './layouts/category-navbar/category-navbar.component';
 import { PostCardComponent } from './layouts/post-card/post-card.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
@@ -11,6 +12,7 @@ import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
+  {path:'dark',component:DarkModeComponent},
   {path:'category/:category/:id',component:SingleCategoryComponent},
   {path:'post/:id',component:SinglPostsComponent},
   {path:'terms-conditions',component:TermsAndConditionsComponent},
