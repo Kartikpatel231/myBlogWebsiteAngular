@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostService } from 'src/app/services/post.service';
 
@@ -26,6 +26,28 @@ similarPostArray:any[] = [];
     this.postService.loadSimilar(catId).subscribe(val=>{
       this.similarPostArray=val;
     })
+  }
+  
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event) {
+    this.showScrollToTop = window.pageYOffset > 500;
+  }
+
+  showScrollToTop: boolean = false;
+
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+    });
   }
 
 }
