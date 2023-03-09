@@ -5,4 +5,22 @@ header{
 .site-logo{
     font-size: 1.5em;
   }
-  
+  /* Change the color of the Font Awesome icons to white */
+.fa-instagram,
+.fa-github,
+.fa-linkedin {
+  color: white;
+}
+
+/* Add a background color and padding to the icon links */
+.card-body a {
+  display: inline-block;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* Add a hover effect to the icon links */
+.card-body a:hover {
+  background-color: #555;
+}

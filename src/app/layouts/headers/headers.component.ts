@@ -8,6 +8,9 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class HeadersComponent implements OnInit {
   categoryArrays:any[] = [];
+  instagramLink = "https://www.instagram.com/java_core_tricks/";
+  githubLink = "https://github.com/kartikpatel231";
+  linkedinLink = "https://www.linkedin.com/in/kartik-patel-27b3731bb/";
 
   constructor(private categoryService:CategoriesService) { }
 
