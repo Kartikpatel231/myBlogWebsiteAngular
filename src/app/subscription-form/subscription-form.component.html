@@ -1,8 +1,8 @@
 <div class="card shadow-effect">
     <div class="card shadow-effect">
-        <div class="text-center mt-3 mb-5">
+        <div class="text-center mt-3 mb-5 text-secondary">
             <h3>SUBSCRIPTION FORM</h3>
-            <p class="m-auto subs-text"> Learn from kartik patel</p>
+            <p class="m-auto text-warning"> Featured post comming soon....</p>
                 <div class="alert alert-danger mt-3" *ngIf="isEmailError">
                     Email is Aleardy in use
                 </div>
@@ -12,7 +12,7 @@
                 </div>
                 <form  class="form-inline mb-5 mt-5 " #subForm=ngForm (ngSubmit)="onSubmit(subForm.value)" *ngIf="!isSubscribed">
 
-                <div class="form-group  col-md-5">
+                <div class="form-group  col-md-5 text-secondary">
                     <label for="username">Username:</label>
                     <input type="text"  class="from-control "
                      placeholder="Your name"
@@ -25,7 +25,7 @@
                         <div *ngIf="Name.errors?.required">Name is Required</div>
                     </div>
                 </div>
-                <div class="form-group col-md-5 ">
+                <div class="form-group col-md-5  text-secondary">
                     <label for="username">Useremail:</label>
                     <input type="email" class="from-control "
                      placeholder="Your email"
