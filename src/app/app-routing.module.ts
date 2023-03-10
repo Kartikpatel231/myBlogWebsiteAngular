@@ -19,7 +19,8 @@ const routes: Routes = [
   {path:'contact',component:ContactUsComponent},
   {path:'about',component:AboutUsComponent},
   {path:'posts/:id',component:PostCardComponent},
-  {path:'category',component:CategoryNavbarComponent}
+  {path:'category',component:CategoryNavbarComponent},
+  {path:'contactUs',component:ContactUsComponent}
 ];
 
 @NgModule({
